@@ -1,7 +1,3 @@
-# VISOR
-V.I.S.O.R. (Vision-based Intelligent Sensing for Odometry and Recognition). I chose this name because it directly reflects the dual nature of the assignment's objectives: utilizing the downward camera for Odometry (estimating lateral drift via optical flow) and Recognition (identifying the AprilTag for precision landing)
-
-
 
 # V.I.S.O.R. (Vision-based Intelligent Sensing for Odometry and Recognition)
 
@@ -41,7 +37,7 @@ To estimate the relative physical position of the landing target, the system sol
 | Method | Computational Cost | Accuracy on Known Target | Robustness to Vibration | Engineering Verdict |
 | :--- | :--- | :--- | :--- | :--- |
 | **PnP (Monocular)** | Very Low | Very High (Sub-centimeter) | High | **Selected.** Provides mathematically stable pose extraction using minimal CPU cycles. |
-| **Stereo Vision** | Medium | High (Depends on baseline) | Low | Rejected. Single downward camera specified. Stereo pairs easily misalign under launch vibrations. |
+| **Homography Decomposition** | Low | High  | Medium | Rejected. PnP (specifically iterative Levenberg-Marquardt) is mathematically more stable. |
 
 ### Assumptions & Limitations
 *   **Tag Size:** The physical AprilTag size is assumed to be exactly 15 cm (0.15m).
