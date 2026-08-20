@@ -2,6 +2,10 @@
 
 This repository contains a vision-based navigation and precision landing prototype developed for a thrust-vectoring hopper. The system is designed to run on a Jetson Orin Nano companion computer. Due to hardware availability during the prototyping phase, a Logitech C270 HD webcam was utilized for initial testing and validation.
 
+
+<img width="815" height="1083" alt="image" src="https://github.com/user-attachments/assets/3562378b-1b97-43d9-818b-e55c134df379" />
+
+
 ## Repository Structure
 
 * `Task_1_April_Tag_Detection.py`: Headless implementation of the precision landing pipeline for SSH environments.
