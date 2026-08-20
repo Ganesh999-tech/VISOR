@@ -2,8 +2,10 @@
 
 This repository contains a vision-based navigation and precision landing prototype developed for a thrust-vectoring hopper. The system is designed to run on a Jetson Orin Nano companion computer. Due to hardware availability during the prototyping phase, a Logitech C270 HD webcam was utilized for initial testing and validation.
 
+<img width="810" height="1005" alt="image" src="https://github.com/user-attachments/assets/a9d63c1e-58ca-493b-8966-84e835925002" />
 
-<img width="815" height="1083" alt="image" src="https://github.com/user-attachments/assets/3562378b-1b97-43d9-818b-e55c134df379" />
+
+
 
 
 ## Repository Structure
