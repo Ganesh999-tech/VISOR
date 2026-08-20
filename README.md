@@ -53,9 +53,7 @@ To resolve the physical 3D pose, the system solves the **Perspective-n-Point (Pn
 1. **The Intrinsic "Cone of Vision":** The camera intrinsics act as a known mathematical lens model, allowing the algorithm to trace straight rays from 2D pixel coordinates out into 3D space.
 2. **Iterative Optimization:** Using the known physical dimensions of the tag (e.g., 15 cm width), `cv2.solvePnP` uses an iterative optimization loop (such as Levenberg-Marquardt). It continually adjusts the camera's position ($X, Y, Z$) and orientation ($Roll, Pitch, Yaw$) until the projection of the 3D model points matches the detected 2D pixel corners.
 
-
-https://youtu.be/ZwF-pKAVIJM?si=siYc-lAgL30GfvsM
-
+[![Downward Camera Precision Landing Task 1](https://img.youtube.com/vi/ZwF-pKAVIJM/0.jpg)](https://youtu.be/ZwF-pKAVIJM)
 
 
 ### Engineering Trade-off: 3D Pose Estimation
@@ -108,7 +106,7 @@ $$\Delta D_x = \frac{\Delta p_x \cdot Z}{f}, \quad \Delta D_y = \frac{\Delta p_y
 $$V_x = \frac{\Delta D_x}{\Delta t}, \quad V_y = \frac{\Delta D_y}{\Delta t}$$
 
 
-https://youtu.be/A1_DGnf8FEs?si=BuEQzMMRq5Fhflit
+[![Downward Camera Lateral Drift Estimation Task 2](https://img.youtube.com/vi/A1_DGnf8FEs/0.jpg)](https://youtu.be/A1_DGnf8FEs)
 
 
 ### Engineering Trade-off: Motion Estimation
