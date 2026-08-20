@@ -122,7 +122,7 @@ $$V_x = \frac{\Delta D_x}{\Delta t}, \quad V_y = \frac{\Delta D_y}{\Delta t}$$
 
 While the downward camera specializes in ground-texture tracking and terminal precision landing, the forward-facing camera serves as a secondary navigation system with distinct advantages:
 
-* **Information Provided:** The forward camera detects the horizon line for absolute attitude estimation, identifies upcoming vertical obstacles, and tracks distant landmarks for global localization.
+* **The forward camera:** The forward camera detects the horizon line for absolute attitude estimation, identifies upcoming vertical obstacles, and tracks distant landmarks for global localization.
 * **Differences from Downward Camera:** The downward camera suffers from motion blur at high speeds and low altitudes. The forward camera observes objects at a greater distance, meaning angular displacement across the sensor is slower, yielding more stable feature tracking during rapid transit.
 * **Visual-Inertial Odometry (VIO) Application:** Yes, the forward camera is highly suited for VIO. By tracking features moving across its field of view, the system calculates relative changes in position.
 * **IMU Integration:** A camera alone struggles with scale ambiguity and high-frequency motion. By tightly coupling the camera with an IMU, the IMU bridges the gap between camera frames, while the camera corrects the IMU's inherent drift, providing a complete 6-Degrees-of-Freedom (6-DOF) state estimate ($X, Y, Z$ translation and $Roll, Pitch, Yaw$ rotation).
