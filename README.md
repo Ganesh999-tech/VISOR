@@ -43,7 +43,10 @@ To resolve the physical 3D pose, the system solves the **Perspective-n-Point (Pn
 
 #### Fundamental Concept: How PnP Works
 
-Unlike appearance-based tracking, PnP is a **geometric optimization method**. It does not track pixels or brightness; instead, it bridges 2D image coordinates with a known 3D world model:
+ PnP is a **geometric optimization method**. It bridges 2D image coordinates with a known 3D world model:
+ <img width="600" height="420" alt="image" src="https://github.com/user-attachments/assets/42603b20-1834-4b5b-9df9-25e6597529f4" />
+ Image Ref : https://docs.opencv.org/4.11.0/d5/d1f/calib3d_solvePnP.html
+
 
 1. **The Intrinsic "Cone of Vision":** The camera intrinsics act as a known mathematical lens model, allowing the algorithm to trace straight rays from 2D pixel coordinates out into 3D space.
 2. **Iterative Optimization:** Using the known physical dimensions of the tag (e.g., 15 cm width), `cv2.solvePnP` uses an iterative optimization loop (such as Levenberg-Marquardt). It continually adjusts the camera's position ($X, Y, Z$) and orientation ($Roll, Pitch, Yaw$) until the projection of the 3D model points matches the detected 2D pixel corners.
@@ -74,6 +77,11 @@ To track high-frequency movement, a Sparse Optical Flow architecture is deployed
 
 * **Feature Detection:** The Shi-Tomasi corner detector (`cv2.goodFeaturesToTrack`) isolates high-contrast corners on the ground plane.
 * **Intensity Tracking:** The Lucas-Kanade method (`cv2.calcOpticalFlowPyrLK`) is utilized. Unlike PnP, Lucas-Kanade is an **intensity-based method**: it analyzes local patches of pixel brightness across consecutive frames to determine how patterns of light have shifted.
+
+ <img width="437" height="194" alt="image" src="https://github.com/user-attachments/assets/3bfdc19a-8c31-452a-8f8c-75c353f70616" />
+ It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector
+ Image Ref : https://docs.opencv.org/3.4.8/d4/dee/tutorial_optical_flow.html
+
 
 ### Mathematical Conversion (Pixels to Physical Motion)
 
