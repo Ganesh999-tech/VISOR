@@ -63,7 +63,7 @@ To resolve the physical 3D pose, the system solves the **Perspective-n-Point (Pn
 ### Assumptions & Limitations
 
 * **Tag Size:** The physical AprilTag size is assumed to be exactly 15 cm ($0.15\,\text{m}$).
-* **Camera Intrinsics:** Generic 640x480 intrinsic parameters were used for the prototype ($f_x = f_y = 600\,\text{px}$). For production, the Evetar lens must undergo checkerboard calibration to extract exact focal lengths and distortion coefficients.
+* **Camera Intrinsics:** Generic 640x480 intrinsic parameters were used for the prototype ($f_x = f_y = 600\,\text{px}$). For production, the Evetar lens must undergo checkerboard calibration to extract exact focal lengths and distortion coefficients. The Basler AG is providing opton to configure camera using Pylon tool software for vision solutions.
 
 ---
 
