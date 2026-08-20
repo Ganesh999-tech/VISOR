@@ -60,7 +60,7 @@ while True:
     frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     
     # ==========================================
-    # 3. OPTICAL FLOW CALCULATION
+    # 3. OPTICAL FLOW CALCULATIONs
     # ==========================================
     if p0 is not None:
         # Calculate optical flow using Lucas-Kanade
