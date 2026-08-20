@@ -45,6 +45,8 @@ To resolve the physical 3D pose, the system solves the **Perspective-n-Point (Pn
 
  PnP is a **geometric optimization method**. It bridges 2D image coordinates with a known 3D world model:
  <img width="600" height="420" alt="image" src="https://github.com/user-attachments/assets/42603b20-1834-4b5b-9df9-25e6597529f4" />
+ 
+ 
  Image Ref : https://docs.opencv.org/4.11.0/d5/d1f/calib3d_solvePnP.html
 
 
@@ -79,6 +81,8 @@ To track high-frequency movement, a Sparse Optical Flow architecture is deployed
 * **Intensity Tracking:** The Lucas-Kanade method (`cv2.calcOpticalFlowPyrLK`) is utilized. Unlike PnP, Lucas-Kanade is an **intensity-based method**: it analyzes local patches of pixel brightness across consecutive frames to determine how patterns of light have shifted.
 
  <img width="437" height="194" alt="image" src="https://github.com/user-attachments/assets/3bfdc19a-8c31-452a-8f8c-75c353f70616" />
+ 
+ 
  It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector
  Image Ref : https://docs.opencv.org/3.4.8/d4/dee/tutorial_optical_flow.html
 
