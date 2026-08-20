@@ -53,6 +53,12 @@ To resolve the physical 3D pose, the system solves the **Perspective-n-Point (Pn
 1. **The Intrinsic "Cone of Vision":** The camera intrinsics act as a known mathematical lens model, allowing the algorithm to trace straight rays from 2D pixel coordinates out into 3D space.
 2. **Iterative Optimization:** Using the known physical dimensions of the tag (e.g., 15 cm width), `cv2.solvePnP` uses an iterative optimization loop (such as Levenberg-Marquardt). It continually adjusts the camera's position ($X, Y, Z$) and orientation ($Roll, Pitch, Yaw$) until the projection of the 3D model points matches the detected 2D pixel corners.
 
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZwF-pKAVIJM?si=WsEaPaUM1mxtWl9y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
 ### Engineering Trade-off: 3D Pose Estimation
 
 | Method | Computational Cost | Accuracy on Known Target | Robustness to Vibration | Engineering Verdict |
@@ -101,6 +107,10 @@ $$\Delta D_x = \frac{\Delta p_x \cdot Z}{f}, \quad \Delta D_y = \frac{\Delta p_y
 2. **Velocity Vector:** Factoring in the elapsed time $\Delta t$ between frames, the lateral velocity components are derived:
 
 $$V_x = \frac{\Delta D_x}{\Delta t}, \quad V_y = \frac{\Delta D_y}{\Delta t}$$
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A1_DGnf8FEs?si=oO4G3J5YHkDBkXne" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 
